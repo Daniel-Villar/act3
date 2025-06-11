@@ -36,7 +36,7 @@ class _MyFormState extends State<MyForm> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.deepPurple.shade300,
-        title: const Text("Formulario de Producto"),
+        title: const Text("Formulario de Productos"),
         centerTitle: true,
       ),
       body: Container(
@@ -118,18 +118,20 @@ class _MyFormState extends State<MyForm> {
       onPressed: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) {
-            return Details(
-              idProducto: _idProductoController.text,
-              nombre: _nombreController.text,
-              precio: _precioController.text,
-              descripcion: _descripcionController.text,
-              precioMayoreo: _precioMayoreoController.text,
-              stack: _stackController.text,
-              demanda: _demandaController.text,
-              idSucursal: _idSucursalController.text,
-            );
-          }),
+          MaterialPageRoute(
+            builder: (context) {
+              return Details(
+                idProducto: _idProductoController.text,
+                nombre: _nombreController.text,
+                precio: _precioController.text,
+                descripcion: _descripcionController.text,
+                precioMayoreo: _precioMayoreoController.text,
+                stack: _stackController.text,
+                demanda: _demandaController.text,
+                idSucursal: _idSucursalController.text,
+              );
+            },
+          ),
         );
       },
       child: Text(
